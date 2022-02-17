@@ -1,5 +1,5 @@
 #
-#fstab file by lopestom for DOOGEE S88Pro_E977 20210730
+#fstab file by lopestom for DOOGEE-S88Pro-Android10.0-20210107 - E977_DG_M13_71_Q0_V3.2.1.1_S210429
 #
 # Android 10 = /system and /vendor in "super" partition.
 /system         ext4    /dev/block/mapper/system      flags=backup=1;display="System";wipeingui
@@ -14,7 +14,7 @@
 
 #Common partitions
 /data		    ext4	/dev/block/platform/bootdevice/by-name/userdata         flags=fileencryption=aes-256-xts;backup=1
-/boot           emmc    /dev/block/bootdevice/by-name/boot    					flags=slotselect;backup=1;flashimg=1;display="Boot"
+/boot            emmc    /dev/block/platform/bootdevice/by-name/boot               flags=backup=1;display="Boot";flashimg=1
 /dtbo           emmc    /dev/block/platform/bootdevice/by-name/dtbo          	flags=backup=1;flashimg=1
 /cache		    ext4	/dev/block/platform/bootdevice/by-name/cache            flags=backup=1;wipeingui;wipeduringfactoryreset
 /recovery	    emmc	/dev/block/platform/bootdevice/by-name/recovery         flags=display="Recovery";backup=1;flashimg=1
@@ -48,7 +48,7 @@
 /tee2			emmc	/dev/block/platform/bootdevice/by-name/tee2             flags=backup=1;subpartitionof=/tee1
 
 #FRP
-/persistent	    emmc	/dev/block/platform/bootdevice/by-name/frp              flags=backup=1
+/persistent	    emmc	/dev/block/platform/bootdevice/by-name/frp              flags=display="frp";backup=1;flashimg=1
 
 #GZ
 /gz1    	    emmc	/dev/block/platform/bootdevice/by-name/gz1              flags=backup=1
@@ -56,6 +56,9 @@
 
 #Modem
 /md1img		    emmc	/dev/block/platform/bootdevice/by-name/md1img           flags=display="Modem";backup=1
+/md1dsp         emmc    /dev/block/platform/bootdevice/by-name/md1dsp            flags=display="md1dsp";backup=1
+/md1arm7		    emmc	/dev/block/platform/bootdevice/by-name/md1arm7           flags=display="md1arm7";backup=1
+/md3img         emmc    /dev/block/platform/bootdevice/by-name/md3img            flags=display="md3img";backup=1
 
 #SCP
 /scp1           emmc    /dev/block/platform/bootdevice/by-name/scp1             flags=backup=1
@@ -73,5 +76,6 @@
 
 
 #Ext
-/external_sd	auto	/dev/block/mmcblk0p1  /dev/block/mmcblk0            flags=display="external_sd";storage;wipeingui;removable;fsflags="utf8"
-/usb_otg	    auto    /dev/block/sdd4  /dev/block/sdd                     flags=display="usb-otg";storage;wipeingui;removable;fsflags="utf8"
+/external_sd	auto	/dev/block/mmcblk1p1  /dev/block/mmcblk1            flags=display="external_sd";storage;wipeingui;removable;fsflags="utf8"
+/usb_otg	    auto    /dev/block/sdd1  /dev/block/sdd                     flags=display="usb-otg";storage;wipeingui;removable;fsflags="utf8"
+
