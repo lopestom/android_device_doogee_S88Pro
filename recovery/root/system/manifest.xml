@@ -3,14 +3,14 @@
         manifest_gpunn_apunn.xml
         manifest_target_level_q.xml
         manifest_audio.xml
-        manifest_dsds_se.xml
+        manifest_tsts.xml
         manifest_radioconfig.xml
-        manifest_pplagent.xml
         manifest_em.xml
         manifest_bgservice.xml
         manifest_wifi.xml
         manifest_videotelephony.xml
         manifest_nfc.xml
+        manifest_secure_element_dsds.xml
         manifest_km4.xml
         manifest_tee.xml
         manifest_log.xml
@@ -18,6 +18,7 @@
         manifest_netdagent.xml
         manifest_pq.xml
         manifest_mmservice.xml
+        manifest.xml
         manifest_gnss.xml
         manifest.xml
         manifest.xml
@@ -259,36 +260,50 @@
             <name>IRadio</name>
             <instance>em1</instance>
             <instance>em2</instance>
+            <instance>em3</instance>
             <instance>imsAospSlot1</instance>
             <instance>imsAospSlot2</instance>
+            <instance>imsAospSlot3</instance>
             <instance>se1</instance>
             <instance>se2</instance>
+            <instance>se3</instance>
             <instance>slot1</instance>
             <instance>slot2</instance>
+            <instance>slot3</instance>
         </interface>
         <interface>
             <name>ISap</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
+            <instance>slot3</instance>
         </interface>
         <fqname>@1.2::IRadio/em1</fqname>
         <fqname>@1.2::IRadio/em2</fqname>
+        <fqname>@1.2::IRadio/em3</fqname>
         <fqname>@1.2::IRadio/imsAospSlot1</fqname>
         <fqname>@1.2::IRadio/imsAospSlot2</fqname>
+        <fqname>@1.2::IRadio/imsAospSlot3</fqname>
         <fqname>@1.2::IRadio/se1</fqname>
         <fqname>@1.2::IRadio/se2</fqname>
+        <fqname>@1.2::IRadio/se3</fqname>
         <fqname>@1.2::IRadio/slot1</fqname>
         <fqname>@1.2::IRadio/slot2</fqname>
+        <fqname>@1.2::IRadio/slot3</fqname>
         <fqname>@1.2::ISap/slot1</fqname>
         <fqname>@1.2::ISap/slot2</fqname>
+        <fqname>@1.2::ISap/slot3</fqname>
         <fqname>@1.4::IRadio/em1</fqname>
         <fqname>@1.4::IRadio/em2</fqname>
+        <fqname>@1.4::IRadio/em3</fqname>
         <fqname>@1.4::IRadio/imsAospSlot1</fqname>
         <fqname>@1.4::IRadio/imsAospSlot2</fqname>
+        <fqname>@1.4::IRadio/imsAospSlot3</fqname>
         <fqname>@1.4::IRadio/se1</fqname>
         <fqname>@1.4::IRadio/se2</fqname>
+        <fqname>@1.4::IRadio/se3</fqname>
         <fqname>@1.4::IRadio/slot1</fqname>
         <fqname>@1.4::IRadio/slot2</fqname>
+        <fqname>@1.4::IRadio/slot3</fqname>
     </hal>
     <hal format="hidl">
         <name>android.hardware.radio.config</name>
@@ -300,7 +315,7 @@
         </interface>
         <fqname>@1.1::IRadioConfig/default</fqname>
     </hal>
-    <hal format="hidl" override="true">
+    <hal format="hidl">
         <name>android.hardware.secure_element</name>
         <transport>hwbinder</transport>
         <version>1.0</version>
@@ -391,16 +406,6 @@
             <instance>default</instance>
         </interface>
         <fqname>@1.2::ISupplicant/default</fqname>
-    </hal>
-    <hal format="hidl">
-        <name>vendor.hardware.betterlife.fingerprint</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IBtlFingerprint</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IBtlFingerprint/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.atci</name>
@@ -506,11 +511,15 @@
             <instance>ConnsysFWHidlServer</instance>
             <instance>MobileLogHidlServer</instance>
             <instance>ModemLogHidlServer</instance>
+            <instance>aee</instance>
+            <instance>default</instance>
         </interface>
         <fqname>@1.0::ILog/ATMWiFiHidlServer</fqname>
         <fqname>@1.0::ILog/ConnsysFWHidlServer</fqname>
         <fqname>@1.0::ILog/MobileLogHidlServer</fqname>
         <fqname>@1.0::ILog/ModemLogHidlServer</fqname>
+        <fqname>@1.0::ILog/aee</fqname>
+        <fqname>@1.0::ILog/default</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.mdmonitor</name>
@@ -560,38 +569,52 @@
     <hal format="hidl" override="true">
         <name>vendor.mediatek.hardware.mtkradioex</name>
         <transport>hwbinder</transport>
-        <version>1.6</version>
+        <version>1.9</version>
         <interface>
             <name>IMtkRadioEx</name>
             <instance>imsSlot1</instance>
             <instance>imsSlot2</instance>
+            <instance>imsSlot3</instance>
             <instance>mtkAssist1</instance>
             <instance>mtkAssist2</instance>
+            <instance>mtkAssist3</instance>
             <instance>mtkCap1</instance>
             <instance>mtkCap2</instance>
+            <instance>mtkCap3</instance>
             <instance>mtkEm1</instance>
             <instance>mtkEm2</instance>
+            <instance>mtkEm3</instance>
             <instance>mtkRcs1</instance>
             <instance>mtkRcs2</instance>
+            <instance>mtkRcs3</instance>
             <instance>mtkSe1</instance>
             <instance>mtkSe2</instance>
+            <instance>mtkSe3</instance>
             <instance>mtkSlot1</instance>
             <instance>mtkSlot2</instance>
+            <instance>mtkSlot3</instance>
         </interface>
-        <fqname>@1.6::IMtkRadioEx/imsSlot1</fqname>
-        <fqname>@1.6::IMtkRadioEx/imsSlot2</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkAssist1</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkAssist2</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkCap1</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkCap2</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkEm1</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkEm2</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkRcs1</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkRcs2</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkSe1</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkSe2</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkSlot1</fqname>
-        <fqname>@1.6::IMtkRadioEx/mtkSlot2</fqname>
+        <fqname>@1.9::IMtkRadioEx/imsSlot1</fqname>
+        <fqname>@1.9::IMtkRadioEx/imsSlot2</fqname>
+        <fqname>@1.9::IMtkRadioEx/imsSlot3</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkAssist1</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkAssist2</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkAssist3</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkCap1</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkCap2</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkCap3</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkEm1</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkEm2</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkEm3</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkRcs1</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkRcs2</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkRcs3</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkSe1</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkSe2</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkSe3</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkSlot1</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkSlot2</fqname>
+        <fqname>@1.9::IMtkRadioEx/mtkSlot3</fqname>
     </hal>
     <hal format="hidl">
         <name>vendor.mediatek.hardware.netdagent</name>
@@ -624,16 +647,6 @@
         <fqname>@2.1::IPower/default</fqname>
     </hal>
     <hal format="hidl">
-        <name>vendor.mediatek.hardware.pplagent</name>
-        <transport>hwbinder</transport>
-        <version>1.0</version>
-        <interface>
-            <name>IPplAgent</name>
-            <instance>default</instance>
-        </interface>
-        <fqname>@1.0::IPplAgent/default</fqname>
-    </hal>
-    <hal format="hidl">
         <name>vendor.mediatek.hardware.pq</name>
         <transport>hwbinder</transport>
         <version>2.3</version>
@@ -662,6 +675,16 @@
             <instance>default</instance>
         </interface>
         <fqname>@2.0::ISupplicant/default</fqname>
+    </hal>
+    <hal format="hidl">
+        <name>vendor.sw.swfingerprint</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ISwfingerprint</name>
+            <instance>default</instance>
+        </interface>
+        <fqname>@1.0::ISwfingerprint/default</fqname>
     </hal>
     <sepolicy>
         <version>29.0</version>
