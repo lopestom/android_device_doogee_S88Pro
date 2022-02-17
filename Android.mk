@@ -18,6 +18,6 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),X30)
+ifeq ($(TARGET_DEVICE),S88_Pro)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif
