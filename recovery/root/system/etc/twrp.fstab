@@ -1,5 +1,5 @@
 #
-#fstab file by lopestom for DOOGEE-S88Pro-Android10.0-20210107 - E977_DG_M13_71_Q0_V3.2.1.1_S210429
+#fstab file by lopestom for DOOGEE-S88Pro-Android10.0-20210107
 #
 # Android 10 = /system and /vendor in "super" partition.
 /system         ext4    /dev/block/mapper/system      flags=backup=1;display="System";wipeingui
@@ -78,4 +78,3 @@
 #Ext
 /external_sd	auto	/dev/block/mmcblk1p1  /dev/block/mmcblk1            flags=display="external_sd";storage;wipeingui;removable;fsflags="utf8"
 /usb_otg	    auto    /dev/block/sdd1  /dev/block/sdd                     flags=display="usb-otg";storage;wipeingui;removable;fsflags="utf8"
-
