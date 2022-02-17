@@ -1,5 +1,5 @@
 #
-# Cubot X30 by LobsterOK(4pda.ru)
+#fstab file by lopestom for DOOGEE S88Pro_E977 20210730
 #
 # Android 10 = /system and /vendor in "super" partition.
 /system         ext4    /dev/block/mapper/system      flags=backup=1;display="System";wipeingui
@@ -10,7 +10,7 @@
 /product        emmc    /dev/block/mapper/product     flags=backup=1;display="Product_image";flashimg=1;wipeingui
 
 #Metadata
-/md_udc 	    ext4	/dev/block/platform/bootdevice/by-name/md_udc           flags=backup=1
+/metadata 	    ext4	/dev/block/platform/bootdevice/by-name/md_udc           flags=backup=1
 
 #Common partitions
 /data		    ext4	/dev/block/platform/bootdevice/by-name/userdata         flags=fileencryption=aes-256-xts;backup=1
