@@ -16,4 +16,4 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/cubot/X30
+LOCAL_PATH := device/doogee/S88Pro
