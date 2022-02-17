@@ -6,26 +6,26 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from X30 device
-$(call inherit-product, device/cubot/X30/device.mk)
+$(call inherit-product, device/doogee/S88Pro/device.mk)
 
 # Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/twrp/config/common.mk)
+$(call inherit-product, vendor/twrp/config/gsm.mk)
 
 # Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := X30
-PRODUCT_NAME := omni_X30
-PRODUCT_BRAND := CUBOT
-PRODUCT_MODEL := X30
-PRODUCT_MANUFACTURER := CUBOT
-PRODUCT_RELEASE_NAME := CubotX30
+PRODUCT_DEVICE := S88Pro
+PRODUCT_NAME := twrp_S88Pro
+PRODUCT_BRAND := DOOGEE
+PRODUCT_MODEL := S88Pro
+PRODUCT_MANUFACTURER := DOOGEE
+PRODUCT_RELEASE_NAME := DOOGEE S88Pro
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=X30 \
-    PRODUCT_NAME=X30_EEA \
-    PRIVATE_BUILD_DESC="full_v965-user 10 QP1A.190711.020 20200603 release-keys"
+    TARGET_DEVICE=S88Pro \
+    PRODUCT_NAME=S88Pro_EEA \
+    PRIVATE_BUILD_DESC="S88Pro_EEA-user 10 QP1A.190711.020 1627610974 release-keys"
 
-BUILD_FINGERPRINT := CUBOT/X30_EEA/X30:10/QP1A.190711.020/20200603:user/release-keys
+BUILD_FINGERPRINT := DOOGEE/S88Pro_EEA/S88Pro:10/QP1A.190711.020/1627610974:user/release-keys
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.adb.secure=0 \
