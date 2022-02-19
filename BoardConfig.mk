@@ -17,6 +17,8 @@
 #
 
 DEVICE_PATH := device/doogee/S88Pro
+# Broken rules
+BUILD_BROKEN_DUP_RULES := true
 
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
