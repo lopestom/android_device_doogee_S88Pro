@@ -13,6 +13,9 @@ on init
     mkdir /mnt/vendor/persist 0700 root root
     mount ext4 /dev/block/platform/bootdevice/by-name/persist /mnt/vendor/persist
 
+on boot
+    start health-hal-2-0
+
 service hwservicemanager /system/bin/hwservicemanager
     user root
     group root readproc
