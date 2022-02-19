@@ -16,6 +16,6 @@
 # limitations under the License.
 #
 COMMON_LUNCH_CHOICES := \
-	twrp_S88Pro-eng	
+	omni_S88Pro-eng	
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_S88Pro.mk
+    $(LOCAL_DIR)/omni_S88Pro.mk
