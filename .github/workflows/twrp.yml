@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp -b twrp-11
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_omni -b twrp-10.0-deprecated
   DEVICE: S88Pro
   DT_LINK: https://github.com/lopestom/android_device_doogee_S88Pro
   DT_PATH: device/doogee/S88Pro
@@ -61,16 +61,16 @@ jobs:
          run: |
               PATH=~/bin:$PATH
               cd twrp
-              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch twrp_S88Pro-eng && mka $TARGET -j5
-              cp  out/target/product/S88Pro/recovery.img    out/target/product/S88Pro/recovery-S88Pro-main-$(date +"%Y%m%d-%H%M").img  
+              export ALLOW_MISSING_DEPENDENCIES=true && source build/envsetup.sh &&lunch omni_S88Pro-eng && mka $TARGET -j5
+              cp  out/target/product/S88Pro/recovery.img    out/target/product/S88Pro/recovery-S88Pro-A10-$(date +"%Y%m%d-%H%M").img  
              
        - name: Release recovery image
          uses: softprops/action-gh-release@v1
          env:
           GITHUB_TOKEN: ${{ secrets.TEST }}
          with:
-          tag_name: TWRP_11-main
-          name: main
+          tag_name: TWRP_S88Pro-A10
+          name: A10
           files: | 
             twrp/out/target/product/S88Pro/recovery*.img
             twrp/out/target/product/S88Pro/ramdisk*.img
