@@ -2,6 +2,8 @@ TWRP for Doogee S88 Pro Android 10 MTK Helio P60
 - Firmware version: DOOGEE-S88Pro-Android10.0-20210107
 * Update TWRP version 3.6.0_1x *
 * Unfortunatelly not have 3.6.0_10 version!!
+
+A10
 ================================================ 
 - Decryption finally works!!!
 - Backup / Restore
