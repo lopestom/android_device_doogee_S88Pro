@@ -13,4 +13,4 @@ A10
 - OTG
 ## Big thanks to:
 - [ADeadTrousers](https://github.com/ADeadTrousers) for helping with decryption.
-- yuroc73 from 4pda(https://4pda.to/forum/index.php?showuser=3841246)
+- [yuroc73 from 4pda](https://4pda.to/forum/index.php?showuser=3841246)
